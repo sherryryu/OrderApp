@@ -1,6 +1,7 @@
 package person;
 
 import drink.IDrinkable;
+import drink.Drinkable;
 
 public class Person {
 	
@@ -14,9 +15,9 @@ public class Person {
 	}
 	
 	
-	public void drink(IDrinkable d){
+	public void drink(Drinkable d){
 		
-		while(d.getAmount() > 0 ){
+		while(d.getTotalAmount() > 0 ){
 			System.out.println("꿀꺽");
 			d.reduceAmount(drinkingSpeed);
 		}
