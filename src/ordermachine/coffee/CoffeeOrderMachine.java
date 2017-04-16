@@ -17,16 +17,17 @@ public class CoffeeOrderMachine extends OrderMachine<Coffee>{
 	private int shot;
 	private int syrup;
 	private int water;
-
+	private Coffee ordered;
 	@Override
 	public Coffee output() {
+
 		ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
-
 		Callable<Coffee> CoffeeTask = new Callable<Coffee>() {
+
 			@Override
 			public Coffee call() throws Exception {
-				Coffee ordered = null;
+
 				if (coffeType.equals("Americano")) {
 					if ((syrup > 0) && (shot > 0) && (water > 0)) { //syrup과 shot과 water 값이 모두 0이 아닐 때 = 값이 다 존재할 때
 						ordered = new Americano(shot, syrup, water);//아메리카노 객체 생성
@@ -47,11 +48,11 @@ public class CoffeeOrderMachine extends OrderMachine<Coffee>{
 
 		try{
 			future.get();
-			System.out.print("추출완료");
+			System.out.println("추출완료");
 		}catch(Exception e){
 			System.out.print("예외 발생");
 		}
-		return null;
+		return ordered;
 	}
 
 	public void setCoffeeType(String coffeeType){

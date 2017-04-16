@@ -19,8 +19,8 @@ public class Americano extends Coffee {
 		System.out.println("물은 "+water+"번 추가\n");
 	}
 
-	@Override
-	public void reduceAmount(int amount) {
-		totalAmount -= amount;
-	}	
+//	@Override
+//	public void reduceAmount(int amount) {
+//		totalAmount -= amount;
+//	}	
 }

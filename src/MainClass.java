@@ -45,7 +45,8 @@ public class MainClass {
 		orderMachine.addWater(5);
 		//주문한 메뉴가 아메리카노라면 setCoffeeType에 아메리카노를 넘겨준다
 		orderMachine.setCoffeeType("Americano");
-		orderedMenu = orderMachine.output(); //AMERICANO
+		orderedMenu = orderMachine.output(); //AMERICANO'
+
 		bomee.drink(orderedMenu);
 
 
