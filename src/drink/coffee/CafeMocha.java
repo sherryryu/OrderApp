@@ -7,4 +7,17 @@ import drink.Coffee;
  */
 
 public class CafeMocha extends Coffee{
+
+    public CafeMocha(){
+        int OriRecipeWater = 4;
+        totalAmount = espressoAmount + OriRecipeWater;
+    }
+    public CafeMocha (int shot, int syrup, int water){
+        super(shot, syrup, water);
+        int OriRecipeWater = 4;
+        totalAmount = espressoAmount + OriRecipeWater + water;
+
+        infoOrder("카페모카");
+    }
+
 }

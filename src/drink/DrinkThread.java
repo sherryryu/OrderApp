@@ -14,16 +14,15 @@ public class DrinkThread extends Thread{
     }
     @Override
     public void run(){
-        while(d.getTotalAmount() > 0 ){
+        while(d.getTotalAmount() > 0 ) {
             System.out.println("꿀꺽");
             d.reduceAmount(drinkingSpeed);
-            try{
+            try {
                 Thread.sleep(500);
-            } catch(InterruptedException e){
-                System.out.println(e.getMessage()+" 예외발생");
+            } catch (InterruptedException e) {
+                System.out.println(e.getMessage() + " 예외발생");
             }
         }
-
 
     }
 }

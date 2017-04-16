@@ -12,11 +12,7 @@ public class Americano extends Coffee {
 		int OriRecipeWater = 4;
 		totalAmount = espressoAmount + OriRecipeWater + water;
 
-
-		System.out.println("주문하신 아메리카노가 나왔습니다");
-		System.out.println("샷은 "+shot+"잔 추가");
-		System.out.println("시럽은 "+syrup+"번 추가");
-		System.out.println("물은 "+water+"번 추가\n");
+	infoOrder("아메리카노");
 	}
 
 //	@Override

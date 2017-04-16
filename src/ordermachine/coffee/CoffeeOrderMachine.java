@@ -35,9 +35,20 @@ public class CoffeeOrderMachine extends OrderMachine<Coffee>{
 						ordered = new Americano();
 					}
 				} else if (coffeType.equals("CaramelMacchiatto")) {
-					ordered = new CaramelMacchiatto();
+					if ((syrup > 0) && (shot > 0) && (water > 0)) { //syrup과 shot과 water 값이 모두 0이 아닐 때 = 값이 다 존재할 때
+
+						ordered = new CaramelMacchiatto(shot, syrup, water);//아메리카노 객체 생성
+					} else {
+
+						ordered = new CaramelMacchiatto();
+					}
 				} else if (coffeType.equals("CafeMocha")) {
-					ordered = new CafeMocha();
+					if ((syrup > 0) && (shot > 0) && (water > 0)) { //syrup과 shot과 water 값이 모두 0이 아닐 때 = 값이 다 존재할 때
+						ordered = new CafeMocha(shot, syrup, water);//아메리카노 객체 생성
+					} else {
+						ordered = new CafeMocha();
+					}
+
 				}
 
 				return ordered;
